@@ -1,0 +1,82 @@
+// course.json
+"_trackingErrors": {
+  "_isEnabled": true,
+  "_notifications": {
+    "_initialize": {
+      "_isEnabled": true,
+      "_classes": "",
+      "title": "Initialization error",
+      "body": "There was a problem establishing a connection.<br><br>Please close the course and try again at a later time.",
+      "_isCancellable": false,
+      "_closeCoursePrompt": {
+        "_isEnabled": false,
+        "label": "Close"
+      }
+    },
+    "_connection": {
+      "_isEnabled": true,
+      "_closeErrorOnSuccess": false,
+      "_attempts": {
+        "_first": {
+          "_classes": "",
+          "title": "Connection error",
+          "body": "Your internet connection is unstable. Your recent progress may not be saved. Please check your connections and select <strong>Retry</strong>.<br><br>If the problem persists, please close the course and relaunch the activity.",
+          "_isCancellable": false
+        },
+        "_intermediate": {
+          "_classes": "",
+          "title": "Connection error",
+          "body": "It looks like we still weren’t able to establish a connection. Please check your connections and select <strong>Retry</strong>.<br><br>If the problem persists, please close the course and relaunch the activity.",
+          "_isCancellable": false
+        },
+        "_final": {
+          "_classes": "",
+          "title": "Connection failure",
+          "body": "Unfortunately, we were unable to re-establish a connection. Your recent progress will not be saved.<br><br>Please close the course and try again at a later time.",
+          "_isCancellable": false
+        },
+        "_success": {
+          "_classes": "",
+          "title": "Connection success",
+          "body": "Your connection was re-established, and your progress has been saved. Select <strong>OK</strong> to continue.",
+          "_isCancellable": false,
+          "_closePrompt": {
+            "_isEnabled": true,
+            "label": "OK"
+          }
+        }
+      },
+      "_retryPrompt": {
+        "_isEnabled": true,
+        "_limit": 2,
+        "label": "Retry"
+      },
+      "_closeCoursePrompt": {
+        "_isEnabled": false,
+        "label": "Close"
+      }
+    },
+    "_data": {
+      "_isEnabled": true,
+      "_classes": "",
+      "title": "Data error",
+      "body": "There was a problem saving or retrieving your data. Your recent progress will not be saved.<br><br>Please close the course and try again at a later time.",
+      "_isCancellable": false,
+      "_closeCoursePrompt": {
+        "_isEnabled": false,
+        "label": "Close"
+      }
+    },
+    "_termination": {
+      "_isEnabled": true,
+      "_classes": "",
+      "title": "Termination error",
+      "body": "There was a problem communicating with the server. Your recent progress will not be saved.<br><br>Please close the course and try again at a later time.",
+      "_isCancellable": false,
+      "_closeCoursePrompt": {
+        "_isEnabled": false,
+        "label": "Close"
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "adapt-contrib-trackingErrors",
+  "version": "0.0.1",
+  "framework": ">=5.3",
+  "homepage": "https://github.com/adaptlearning/adapt-contrib-trackingErrors",
+  "issues": "https://github.com/adaptlearning/adapt-contrib-trackingErrors/issues",
+  "displayName": "trackingErrors",
+  "extension": "trackingErrors",
+  "description": "An extension which manages and displays notifications to provide a consistent UI for tracking errors across plugins.",
+  "main": "/js/adapt-trackingErrors.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-extension",
+    "tracking",
+    "errors"
+  ],
+  "license": "GPLv3",
+  "targetAttribute": "_trackingErrors"
+}
