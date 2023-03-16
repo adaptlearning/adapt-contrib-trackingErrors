@@ -187,7 +187,7 @@ export default class ErrorNotificationManager extends Backbone.Model {
   }
 
   onTerminationError() {
-    const config = this.get('_terminate');
+    const config = this.get('_termination');
     if (config?._isEnabled) this._showNotification(config, TERMINATION_ID);
   }
 

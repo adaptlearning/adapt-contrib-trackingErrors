@@ -5,7 +5,7 @@ An extension which manages and displays notifications to provide a consistent UI
 Notifications are split into four main error types:
  * **initialize** - errors during launch
  * **connection** - errors when attempting data transmission
- * **data** - errors due to invalid or malformed data tranmission
+ * **data** - errors due to invalid or malformed data transmission
  * **termination** - errors when closing the session
 
 Each notification can be configured to display appropriate messaging, and prevent learners from proceeding further through the course if required. Connection based errors have the option to retry the previously failed data transmission to a configurable attempt limit.
@@ -90,7 +90,7 @@ The attributes listed below are used in *course.json*, and are properly formatte
 
        * **\_closePrompt** (object): The settings used to configure the close prompt within the notification. Contains the following attributes:
 
-         * **\_isEnabled** (boolean): Determines whether a button prompt to close the notification (separate to the default notify close) is included. The default is `true`.
+         * **\_isEnabled** (boolean): Determines whether a button prompt to close the notification (separate to the default notify close button) is included. The default is `true`.
 
          * **label** (string): Text that appears on the button.
 
