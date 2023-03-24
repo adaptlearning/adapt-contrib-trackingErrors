@@ -8,19 +8,79 @@
     },
     "with": {
       "properties": {
-        "_spoor": {
+        "_trackingErrors": {
           "type": "object",
-          "title": "Spoor (SCORM)",
+          "title": "Tracking errors",
           "default": {},
           "properties": {
-            "_messages": {
+            "_isEnabled": {
+              "type": "boolean",
+              "title": "Enable tracking errors",
+              "description": "Determines whether the notifications are enabled.",
+              "default": true
+            },
+            "_notifications": {
               "type": "object",
-              "title": "Error messages",
-              "description": "Optional object that can be used to amend/translate the error messages shown by the spoor extension",
+              "title": "Notifications",
               "default": {},
-              "_backboneForms": {
-                "type": "CodeEditor",
-                "mode": "json"
+              "properties": {
+                "_initialize": {
+                  "type": "object",
+                  "title": "Initialization",
+                  "default": {},
+                  "properties": {
+                    "_isEnabled": {
+                      "type": "boolean",
+                      "title": "Enable initialization error?",
+                      "description": "Determines whether this notification is enabled.",
+                      "default": true
+                    },
+                    "_classes": {
+                      "type": "string",
+                      "title": "Custom classes",
+                      "default": "CSS class name to be applied to the popup. The class must be predefined in one of the LESS files. Separate multiple classes with a space."
+                    },
+                    "title": {
+                      "type": "string",
+                      "title": "Title",
+                      "description": "The text used as the popup title.",
+                      "default": "Initialization error"
+                    },
+                    "body": {
+                      "type": "string",
+                      "title": "Body",
+                      "description": "The text used to inform/instruct users about the error.",
+                      "default": ""
+                    },
+                    "_isCancellable": {
+                      "type": "boolean",
+                      "title": "Is able to be cancelled?",
+                      "description": "Determines whether the notification can be cancelled/closed.",
+                      "default": false
+                    },
+                    "properties": {
+                      "_closeCoursePrompt": {
+                        "type": "object",
+                        "title": "Close course prompt",
+                        "default": {},
+                        "properties": {
+                          "_isEnabled": {
+                            "type": "boolean",
+                            "title": "Enable course close button?",
+                            "description": "Determines whether a button prompt to close the course window (only possible if the course was launched in a popup window) is included.",
+                            "default": false
+                          },
+                          "label": {
+                            "type": "string",
+                            "title": "Button label",
+                            "description": "Text that appears on the button.",
+                            "default": "Close"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
               }
             }
           }
