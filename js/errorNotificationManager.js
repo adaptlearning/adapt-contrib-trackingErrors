@@ -55,7 +55,7 @@ export default class ErrorNotificationManager extends Backbone.Model {
   }
 
   _getNotifyConfig(config, id) {
-    let notifyConfig = {
+    const notifyConfig = {
       title: config.title,
       body: config.body,
       _classes: `trackingError ${id.toLowerCase()} ${config._classes}`,
@@ -64,14 +64,14 @@ export default class ErrorNotificationManager extends Backbone.Model {
 
     let isCancellable = true;
 
-    if (config.hasOwnProperty('_isCancellable')) {
+    if (Object.prototype.hasOwnProperty.call(config, '_isCancellable')) {
       isCancellable = config._isCancellable;
       notifyConfig._isCancellable = isCancellable;
       notifyConfig._closeOnShadowClick = !isCancellable;
     }
 
     if (this._hasPrompts(config)) {
-      let prompts = [];
+      const prompts = [];
 
       if (this._canRetry(config)) {
         prompts.push({
