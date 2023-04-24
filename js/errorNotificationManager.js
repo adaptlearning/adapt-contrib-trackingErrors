@@ -64,7 +64,7 @@ export default class ErrorNotificationManager extends Backbone.Model {
 
     let isCancellable = true;
 
-    if (Object.prototype.hasOwnProperty.call(config, '_isCancellable')) {
+    if (Object.hasOwn(config, '_isCancellable')) {
       isCancellable = config._isCancellable;
       notifyConfig._isCancellable = isCancellable;
       notifyConfig._closeOnShadowClick = !isCancellable;
