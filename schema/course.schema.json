@@ -1,0 +1,401 @@
+{
+  "$anchor": "trackingErrors-course",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "$patch": {
+    "source": {
+      "$ref": "course"
+    },
+    "with": {
+      "properties": {
+        "_trackingErrors": {
+          "type": "object",
+          "title": "Tracking errors",
+          "default": {},
+          "properties": {
+            "_isEnabled": {
+              "type": "boolean",
+              "title": "Enable tracking errors",
+              "description": "Determines whether the notifications are enabled.",
+              "default": true
+            },
+            "_notifications": {
+              "type": "object",
+              "title": "Notifications",
+              "default": {},
+              "properties": {
+                "_initialize": {
+                  "type": "object",
+                  "title": "Initialization Error",
+                  "default": {},
+                  "properties": {
+                    "_isEnabled": {
+                      "type": "boolean",
+                      "title": "Enable initialization error?",
+                      "description": "Determines whether this notification is enabled.",
+                      "default": true
+                    },
+                    "_classes": {
+                      "type": "string",
+                      "title": "Custom classes",
+                      "description": "CSS class name to be applied to the popup. The class must be predefined in one of the LESS files. Separate multiple classes with a space."
+                    },
+                    "title": {
+                      "type": "string",
+                      "title": "Title",
+                      "description": "The text used as the popup title.",
+                      "default": "Initialization Error"
+                    },
+                    "body": {
+                      "type": "string",
+                      "title": "Body",
+                      "description": "The text used to inform/instruct users about the error.",
+                      "default": "There was a problem establishing a connection.<br><br>Please close the course and try again at a later time."
+                    },
+                    "_isCancellable": {
+                      "type": "boolean",
+                      "title": "Is able to be cancelled?",
+                      "description": "Determines whether the notification can be cancelled/closed.",
+                      "default": false
+                    },
+                    "properties": {
+                      "_closeCoursePrompt": {
+                        "type": "object",
+                        "title": "Close course prompt",
+                        "default": {},
+                        "properties": {
+                          "_isEnabled": {
+                            "type": "boolean",
+                            "title": "Enable course close button?",
+                            "description": "Determines whether a button prompt to close the course window (only possible if the course was launched in a popup window) is included.",
+                            "default": false
+                          },
+                          "label": {
+                            "type": "string",
+                            "title": "Button label",
+                            "description": "Text that appears on the button.",
+                            "default": "Close"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "_connection": {
+                  "type": "object",
+                  "title": "Connection Error",
+                  "default": {},
+                  "properties": {
+                    "_isEnabled": {
+                      "type": "boolean",
+                      "title": "Enable connection error?",
+                      "description": "Determines whether this notification is enabled.",
+                      "default": true
+                    },
+                    "_closeErrorOnSuccess": {
+                      "type": "boolean",
+                      "title": "Close error on success",
+                      "description": "Determines whether this notification is enabled.",
+                      "default": false
+                    },
+                    "_attempts": {
+                      "type": "object",
+                      "title": "Attempts",
+                      "default": {},
+                      "properties": {
+                        "_first": {
+                          "type": "object",
+                          "title": "First Attempt",
+                          "default": {},
+                          "properties": {
+                            "_classes": {
+                              "type": "string",
+                              "title": "Custom classes",
+                              "description": "CSS class name to be applied to the popup. The class must be predefined in one of the LESS files. Separate multiple classes with a space."
+                            },
+                            "title": {
+                              "type": "string",
+                              "title": "Title",
+                              "description": "The text used as the popup title.",
+                              "default": "Connection Error"
+                            },
+                            "body": {
+                              "type": "string",
+                              "title": "Body",
+                              "description": "The text used to inform/instruct users about the error.",
+                              "default": "Your internet connection is unstable. Your recent progress may not be saved. Please check your connections and select <strong>Retry</strong>.<br><br>If the problem persists, please close the course and relaunch the activity."
+                            },
+                            "_isCancellable": {
+                              "type": "boolean",
+                              "title": "Is able to be cancelled?",
+                              "description": "Determines whether the notification can be cancelled/closed.",
+                              "default": false
+                            }
+                          }
+                        },
+                        "_intermediate": {
+                          "_classes": {
+                            "type": "string",
+                            "title": "Custom classes",
+                            "description": "CSS class name to be applied to the popup. The class must be predefined in one of the LESS files. Separate multiple classes with a space."
+                          },
+                          "title": {
+                            "type": "string",
+                            "title": "Title",
+                            "description": "The text used as the popup title.",
+                            "default": "Connection Error"
+                          },
+                          "body": {
+                            "type": "string",
+                            "title": "Body",
+                            "description": "The text used to inform/instruct users about the error.",
+                            "default": "It looks like we still weren’t able to establish a connection. Please check your connections and select <strong>Retry</strong>.<br><br>If the problem persists, please close the course and relaunch the activity."
+                          },
+                          "_isCancellable": {
+                            "type": "boolean",
+                            "title": "Is able to be cancelled?",
+                            "description": "Determines whether the notification can be cancelled/closed.",
+                            "default": false
+                          }
+                        },
+                        "_final": {
+                          "_classes": {
+                            "type": "string",
+                            "title": "Custom classes",
+                            "description": "CSS class name to be applied to the popup. The class must be predefined in one of the LESS files. Separate multiple classes with a space."
+                          },
+                          "title": {
+                            "type": "string",
+                            "title": "Title",
+                            "description": "The text used as the popup title.",
+                            "default": "Connection Failure"
+                          },
+                          "body": {
+                            "type": "string",
+                            "title": "Body",
+                            "description": "The text used to inform/instruct users about the error.",
+                            "default": "Unfortunately, we were unable to re-establish a connection. Your recent progress will not be saved.<br><br>Please close the course and try again at a later time."
+                          },
+                          "_isCancellable": {
+                            "type": "boolean",
+                            "title": "Is able to be cancelled?",
+                            "description": "Determines whether the notification can be cancelled/closed.",
+                            "default": false
+                          }
+                        },
+                        "_success": {
+                          "_classes": {
+                            "type": "string",
+                            "title": "Custom classes",
+                            "description": "CSS class name to be applied to the popup. The class must be predefined in one of the LESS files. Separate multiple classes with a space."
+                          },
+                          "title": {
+                            "type": "string",
+                            "title": "Title",
+                            "description": "The text used as the popup title.",
+                            "default": "Connection Success"
+                          },
+                          "body": {
+                            "type": "string",
+                            "title": "Body",
+                            "description": "The text used to inform/instruct users about the error.",
+                            "default": "Your connection was re-established, and your progress has been saved. Select <strong>OK</strong> to continue."
+                          },
+                          "_isCancellable": {
+                            "type": "boolean",
+                            "title": "Is able to be cancelled?",
+                            "description": "Determines whether the notification can be cancelled/closed.",
+                            "default": false
+                          },
+                          "_closePrompt": {
+                            "type": "object",
+                            "title": "Close prompt",
+                            "default": {},
+                            "properties": {
+                              "_isEnabled": {
+                                "type": "boolean",
+                                "title": "Enable close prompt?",
+                                "description": "Determines whether this notification is enabled.",
+                                "default": true
+                              },
+                              "_closeErrorOnSuccess": {
+                                "type": "string",
+                                "title": "Button label",
+                                "description": "Determines whether this notification is enabled.",
+                                "default": "OK"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "_retryPrompt": {
+                      "type": "object",
+                      "title": "Retry prompt",
+                      "default": {},
+                      "properties": {
+                        "_isEnabled": {
+                          "type": "boolean",
+                          "title": "Enable retry prompt?",
+                          "description": "Determines whether this notification is enabled.",
+                          "default": true
+                        },
+                        "_limit": {
+                          "type": "number",
+                          "title": "Number of retries",
+                          "description": "Determines whether this notification is enabled.",
+                          "default": 2
+                        },
+                        "label": {
+                          "type": "string",
+                          "title": "Button label",
+                          "description": "Determines whether this notification is enabled.",
+                          "default": "Retry"
+                        }
+                      }
+                    },
+                    "_closeCoursePrompt": {
+                      "type": "object",
+                      "title": "Course close prompt",
+                      "default": {},
+                      "properties": {
+                        "_isEnabled": {
+                          "type": "boolean",
+                          "title": "Enable course close prompt?",
+                          "description": "Determines whether this notification is enabled.",
+                          "default": true
+                        },
+                        "label": {
+                          "type": "string",
+                          "title": "Button label",
+                          "description": "Determines whether this notification is enabled.",
+                          "default": "Close"
+                        }
+                      }
+                    }
+                  }
+                },
+                "_data": {
+                  "type": "object",
+                  "title": "Data Error",
+                  "default": {},
+                  "properties": {
+                    "_isEnabled": {
+                      "type": "boolean",
+                      "title": "Enable data error?",
+                      "description": "Determines whether this notification is enabled.",
+                      "default": true
+                    },
+                    "_classes": {
+                      "type": "string",
+                      "title": "Custom classes",
+                      "description": "CSS class name to be applied to the popup. The class must be predefined in one of the LESS files. Separate multiple classes with a space.",
+                      "default": ""
+                    },
+                    "title": {
+                      "type": "string",
+                      "title": "Title",
+                      "description": "The text used as the popup title.",
+                      "default": "Data Error"
+                    },
+                    "body": {
+                      "type": "string",
+                      "title": "Body",
+                      "description": "The text used to inform/instruct users about the error.",
+                      "default": "There was a problem saving or retrieving your data. Your recent progress will not be saved.<br><br>Please close the course and try again at a later time."
+                    },
+                    "_isCancellable": {
+                      "type": "boolean",
+                      "title": "Is able to be cancelled?",
+                      "description": "Determines whether the notification can be cancelled/closed.",
+                      "default": false
+                    },
+                    "properties": {
+                      "_closeCoursePrompt": {
+                        "type": "object",
+                        "title": "Close course prompt",
+                        "default": {},
+                        "properties": {
+                          "_isEnabled": {
+                            "type": "boolean",
+                            "title": "Enable course close button?",
+                            "description": "Determines whether a button prompt to close the course window (only possible if the course was launched in a popup window) is included.",
+                            "default": false
+                          },
+                          "label": {
+                            "type": "string",
+                            "title": "Button label",
+                            "description": "Text that appears on the button.",
+                            "default": "Close"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "_termination": {
+                  "type": "object",
+                  "title": "Termination Error",
+                  "default": {},
+                  "properties": {
+                    "_isEnabled": {
+                      "type": "boolean",
+                      "title": "Enable termination error?",
+                      "description": "Determines whether this notification is enabled.",
+                      "default": true
+                    },
+                    "_classes": {
+                      "type": "string",
+                      "title": "Custom classes",
+                      "description": "CSS class name to be applied to the popup. The class must be predefined in one of the LESS files. Separate multiple classes with a space.",
+                      "default": ""
+                    },
+                    "title": {
+                      "type": "string",
+                      "title": "Title",
+                      "description": "The text used as the popup title.",
+                      "default": "Termination Error"
+                    },
+                    "body": {
+                      "type": "string",
+                      "title": "Body",
+                      "description": "The text used to inform/instruct users about the error.",
+                      "default": "There was a problem communicating with the server. Your recent progress will not be saved.<br><br>Please close the course and try again at a later time."
+                    },
+                    "_isCancellable": {
+                      "type": "boolean",
+                      "title": "Is able to be cancelled?",
+                      "description": "Determines whether the notification can be cancelled/closed.",
+                      "default": false
+                    },
+                    "properties": {
+                      "_closeCoursePrompt": {
+                        "type": "object",
+                        "title": "Close course prompt",
+                        "default": {},
+                        "properties": {
+                          "_isEnabled": {
+                            "type": "boolean",
+                            "title": "Enable course close button?",
+                            "description": "Determines whether a button prompt to close the course window (only possible if the course was launched in a popup window) is included.",
+                            "default": false
+                          },
+                          "label": {
+                            "type": "string",
+                            "title": "Button label",
+                            "description": "Text that appears on the button.",
+                            "default": "Close"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
