@@ -1,0 +1,576 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "required": false,
+  "properties": {
+    "pluginLocations": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "config": {
+          "type": "object"
+        },
+        "course": {
+          "type": "object",
+          "properties": {
+            "_trackingErrors": {
+              "type": "object",
+              "required": false,
+              "legend": "Tracking Errors",
+              "properties": {
+                "_isEnabled": {
+                  "type": "boolean",
+                  "required": false,
+                  "default": true,
+                  "title": "Enable tracking errors",
+                  "inputType": "Checkbox",
+                  "validators": [],
+                  "help": "Determines whether the notifications are enabled."
+                },
+                "_notifications": {
+                  "type": "object",
+                  "required": false,
+                  "title": "Notifications",
+                  "properties": {
+                    "_initialize": {
+                      "type": "object",
+                      "required": false,
+                      "title": "Initialization error",
+                      "properties": {
+                        "_isEnabled": {
+                          "type": "boolean",
+                          "required": false,
+                          "default": true,
+                          "title": "Enable initialization error?",
+                          "inputType": "Checkbox",
+                          "validators": [],
+                          "help": "Determines whether this notification is enabled."
+                        },
+                        "_classes": {
+                          "type": "string",
+                          "required": false,
+                          "default": "",
+                          "title": "Custom classes",
+                          "inputType": "Text",
+                          "validators": [],
+                          "help": "CSS class name to be applied to the popup. The class must be predefined in one of the LESS files. Separate multiple classes with a space."
+                        },
+                        "title": {
+                          "type": "string",
+                          "required": false,
+                          "default": "Initialization error",
+                          "title": "Title",
+                          "inputType": "Text",
+                          "validators": [],
+                          "translatable": true
+                        },
+                        "body": {
+                          "type": "string",
+                          "required": false,
+                          "default": "There was a problem establishing a connection. Please close the course and try again at a later time.",
+                          "title": "Body",
+                          "inputType": "Text",
+                          "validators": [],
+                          "translatable": true
+                        },
+                        "_isCancellable": {
+                          "type": "boolean",
+                          "required": false,
+                          "default": false,
+                          "title": "Is able to be cancelled?",
+                          "inputType": "Checkbox",
+                          "validators": [],
+                          "help": "Determines whether the notification can be cancelled/closed."
+                        },
+                        "_closeCoursePrompt": {
+                          "type": "object",
+                          "required": false,
+                          "title": "Close course prompt",
+                          "properties": {
+                            "_isEnabled": {
+                              "type": "boolean",
+                              "required": false,
+                              "default": true,
+                              "title": "Enable close course button?",
+                              "inputType": "Checkbox",
+                              "validators": [],
+                              "help": "Determines whether a button prompt to close the course window is included. This is only possible if the course was launched in a popup window."
+                            },
+                            "label": {
+                              "type": "string",
+                              "required": false,
+                              "default": "Close",
+                              "title": "Button label",
+                              "inputType": "Text",
+                              "validators": [],
+                              "translatable": true
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "_connection": {
+                      "type": "object",
+                      "required": false,
+                      "title": "Connection Error",
+                      "properties": {
+                        "_isEnabled": {
+                          "type": "boolean",
+                          "required": false,
+                          "default": true,
+                          "title": "Enable connection error?",
+                          "inputType": "Checkbox",
+                          "validators": [],
+                          "help": "Determines whether this notification is enabled."
+                        },
+                        "_closeErrorOnSuccess": {
+                          "type": "boolean",
+                          "required": false,
+                          "default": false,
+                          "title": "Close error on success",
+                          "inputType": "Checkbox",
+                          "validators": [],
+                          "help": "Determines whether this notification is enabled."
+                        },
+                        "_attempts": {
+                          "type": "object",
+                          "required": false,
+                          "title": "Attempts",
+                          "properties": {
+                            "_first": {
+                              "type": "object",
+                              "required": false,
+                              "title": "First Attempt",
+                              "properties": {
+                                "_classes": {
+                                  "type": "string",
+                                  "required": false,
+                                  "default": "",
+                                  "title": "Custom classes",
+                                  "inputType": "Text",
+                                  "validators": [],
+                                  "help": "CSS class name to be applied to the popup. The class must be predefined in one of the LESS files. Separate multiple classes with a space."
+                                },
+                                "title": {
+                                  "type": "string",
+                                  "required": false,
+                                  "default": "Connection error",
+                                  "title": "Title",
+                                  "inputType": "Text",
+                                  "validators": [],
+                                  "translatable": true
+                                },
+                                "body": {
+                                  "type": "string",
+                                  "required": false,
+                                  "default": "Your internet connection is unstable. Your recent progress may not be saved. Please check your connections and select Retry. If the problem persists, please close the course and relaunch the activity.",
+                                  "title": "Body",
+                                  "inputType": "Text",
+                                  "validators": [],
+                                  "translatable": true
+                                },
+                                "_isCancellable": {
+                                  "type": "boolean",
+                                  "required": false,
+                                  "default": false,
+                                  "title": "Is able to be cancelled?",
+                                  "inputType": "Checkbox",
+                                  "validators": [],
+                                  "help": "Determines whether the notification can be cancelled/closed."
+                                }
+                              }
+                            },
+                            "_intermediate": {
+                              "type": "object",
+                              "required": false,
+                              "title": "Intermediate Attempt",
+                              "properties": {
+                                "_classes": {
+                                  "type": "string",
+                                  "required": false,
+                                  "default": "",
+                                  "title": "Custom classes",
+                                  "inputType": "Text",
+                                  "validators": [],
+                                  "help": "CSS class name to be applied to the popup. The class must be predefined in one of the LESS files. Separate multiple classes with a space."
+                                },
+                                "title": {
+                                  "type": "string",
+                                  "required": false,
+                                  "default": "Connection error",
+                                  "title": "Title",
+                                  "inputType": "Text",
+                                  "validators": [],
+                                  "translatable": true
+                                },
+                                "body": {
+                                  "type": "string",
+                                  "required": false,
+                                  "default": "It looks like we still weren’t able to establish a connection. Please check your connections and select Retry. If the problem persists, please close the course and relaunch the activity.",
+                                  "title": "Body",
+                                  "inputType": "Text",
+                                  "validators": [],
+                                  "translatable": true
+                                },
+                                "_isCancellable": {
+                                  "type": "boolean",
+                                  "required": false,
+                                  "default": false,
+                                  "title": "Is able to be cancelled?",
+                                  "inputType": "Checkbox",
+                                  "validators": [],
+                                  "help": "Determines whether the notification can be cancelled/closed."
+                                }
+                              }
+                            },
+                            "_final": {
+                              "type": "object",
+                              "required": false,
+                              "title": "Final Attempt",
+                              "properties": {
+                                "_classes": {
+                                  "type": "string",
+                                  "required": false,
+                                  "default": "",
+                                  "title": "Custom classes",
+                                  "inputType": "Text",
+                                  "validators": [],
+                                  "help": "CSS class name to be applied to the popup. The class must be predefined in one of the LESS files. Separate multiple classes with a space."
+                                },
+                                "title": {
+                                  "type": "string",
+                                  "required": false,
+                                  "default": "Connection Failure",
+                                  "title": "Title",
+                                  "inputType": "Text",
+                                  "validators": [],
+                                  "translatable": true
+                                },
+                                "body": {
+                                  "type": "string",
+                                  "required": false,
+                                  "default": "Unfortunately, we were unable to re-establish a connection. Your recent progress will not be saved. Please close the course and try again at a later time.",
+                                  "title": "Body",
+                                  "inputType": "Text",
+                                  "validators": [],
+                                  "translatable": true
+                                },
+                                "_isCancellable": {
+                                  "type": "boolean",
+                                  "required": false,
+                                  "default": false,
+                                  "title": "Is able to be cancelled?",
+                                  "inputType": "Checkbox",
+                                  "validators": [],
+                                  "help": "Determines whether the notification can be cancelled/closed."
+                                }
+                              }
+                            },
+                            "_success": {
+                              "type": "object",
+                              "required": false,
+                              "title": "Successful Attempt",
+                              "properties": {
+                                "_classes": {
+                                  "type": "string",
+                                  "required": false,
+                                  "default": "",
+                                  "title": "Custom classes",
+                                  "inputType": "Text",
+                                  "validators": [],
+                                  "help": "CSS class name to be applied to the popup. The class must be predefined in one of the LESS files. Separate multiple classes with a space."
+                                },
+                                "title": {
+                                  "type": "string",
+                                  "required": false,
+                                  "default": "Connection Success",
+                                  "title": "Title",
+                                  "inputType": "Text",
+                                  "validators": [],
+                                  "translatable": true
+                                },
+                                "body": {
+                                  "type": "string",
+                                  "required": false,
+                                  "default": "Your connection was re-established, and your progress has been saved. Select OK to continue.",
+                                  "title": "Body",
+                                  "inputType": "Text",
+                                  "validators": [],
+                                  "translatable": true
+                                },
+                                "_isCancellable": {
+                                  "type": "boolean",
+                                  "required": false,
+                                  "default": false,
+                                  "title": "Is able to be cancelled?",
+                                  "inputType": "Checkbox",
+                                  "validators": [],
+                                  "help": "Determines whether the notification can be cancelled/closed."
+                                }
+                              }
+                            },
+                            "_closeCoursePrompt": {
+                              "type": "object",
+                              "required": false,
+                              "title": "Close course prompt",
+                              "properties": {
+                                "_isEnabled": {
+                                  "type": "boolean",
+                                  "required": false,
+                                  "default": true,
+                                  "title": "Enable close course prompt?",
+                                  "inputType": "Checkbox",
+                                  "validators": [],
+                                  "help": "Determines whether a button prompt to close the course window (only possible if the course was launched in a popup window) is included."
+                                },
+                                "_closeErrorOnSuccess": {
+                                  "type": "string",
+                                  "required": false,
+                                  "default": "OK",
+                                  "title": "Button label",
+                                  "inputType": "Text",
+                                  "validators": [],
+                                  "translatable": true
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "_retryPrompt": {
+                          "type": "object",
+                          "required": false,
+                          "title": "Retry prompt",
+                          "properties": {
+                            "_isEnabled": {
+                              "type": "boolean",
+                              "required": false,
+                              "default": true,
+                              "title": "Enable retry prompt?",
+                              "inputType": "Checkbox",
+                              "validators": [],
+                              "help": "Determines whether this notification is enabled."
+                            },
+                            "_limit": {
+                              "type": "number",
+                              "required": false,
+                              "default": 2,
+                              "title": "Number of retries",
+                              "inputType": "Number",
+                              "validators": ["number"],
+                              "help": "Sets the number of connection retries before the final connection test appears."
+                            },
+                            "label": {
+                              "type": "string",
+                              "required": false,
+                              "default": "Retry",
+                              "title": "Button label",
+                              "inputType": "Text",
+                              "validators": [],
+                              "translatable": true
+                            }
+                          }
+                        },
+                        "_closeCoursePrompt": {
+                          "type": "object",
+                          "required": false,
+                          "title": "Close course prompt",
+                          "properties": {
+                            "_isEnabled": {
+                              "type": "boolean",
+                              "required": false,
+                              "default": true,
+                              "title": "Enable close course prompt?",
+                              "inputType": "Checkbox",
+                              "validators": [],
+                              "help": "Determines whether this notification is enabled."
+                            },
+                            "label": {
+                              "type": "string",
+                              "required": false,
+                              "default": "Close",
+                              "title": "Button label",
+                              "inputType": "Text",
+                              "validators": [],
+                              "translatable": true
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "_data": {
+                      "type": "object",
+                      "required": false,
+                      "title": "Data Error",
+                      "properties": {
+                        "_isEnabled": {
+                          "type": "boolean",
+                          "required": false,
+                          "default": true,
+                          "title": "Enable connection error?",
+                          "inputType": "Checkbox",
+                          "validators": [],
+                          "help": "Determines whether this notification is enabled."
+                        },
+                        "_classes": {
+                          "type": "string",
+                          "required": false,
+                          "default": "",
+                          "title": "Custom classes",
+                          "inputType": "Text",
+                          "validators": [],
+                          "help": "CSS class name to be applied to the popup. The class must be predefined in one of the LESS files. Separate multiple classes with a space."
+                        },
+                        "title": {
+                          "type": "string",
+                          "required": false,
+                          "default": "Data error",
+                          "title": "Title",
+                          "inputType": "Text",
+                          "validators": [],
+                          "translatable": true
+                        },
+                        "body": {
+                          "type": "string",
+                          "required": false,
+                          "default": "There was a problem saving or retrieving your data. Your recent progress will not be saved. Please close the course and try again at a later time.",
+                          "title": "Body",
+                          "inputType": "Text",
+                          "validators": [],
+                          "translatable": true
+                        },
+                        "_isCancellable": {
+                          "type": "boolean",
+                          "required": false,
+                          "default": false,
+                          "title": "Is able to be cancelled?",
+                          "inputType": "Checkbox",
+                          "validators": [],
+                          "help": "Determines whether the notification can be cancelled/closed."
+                        },
+                        "_closeCoursePrompt": {
+                          "type": "object",
+                          "required": false,
+                          "title": "Close course prompt",
+                          "properties": {
+                            "_isEnabled": {
+                              "type": "boolean",
+                              "required": false,
+                              "default": true,
+                              "title": "Enable close course prompt?",
+                              "inputType": "Checkbox",
+                              "validators": [],
+                              "help": "Determines whether a button prompt to close the course window (only possible if the course was launched in a popup window) is included."
+                            },
+                            "_label": {
+                              "type": "string",
+                              "required": false,
+                              "default": "Close",
+                              "title": "Button label",
+                              "inputType": "Text",
+                              "validators": [],
+                              "translatable": true
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "_termination": {
+                      "type": "object",
+                      "required": false,
+                      "title": "Termination Error",
+                      "properties": {
+                        "_isEnabled": {
+                          "type": "boolean",
+                          "required": false,
+                          "default": true,
+                          "title": "Enable termination error?",
+                          "inputType": "Checkbox",
+                          "validators": [],
+                          "help": "Determines whether this notification is enabled."
+                        },
+                        "_classes": {
+                          "type": "string",
+                          "required": false,
+                          "default": "",
+                          "title": "Custom classes",
+                          "inputType": "Text",
+                          "validators": [],
+                          "help": "CSS class name to be applied to the popup. The class must be predefined in one of the LESS files. Separate multiple classes with a space."
+                        },
+                        "title": {
+                          "type": "string",
+                          "required": false,
+                          "default": "Termination error",
+                          "title": "Title",
+                          "inputType": "Text",
+                          "validators": [],
+                          "translatable": true
+                        },
+                        "body": {
+                          "type": "string",
+                          "required": false,
+                          "default": "There was a problem communicating with the server. Your recent progress will not be saved. Please close the course and try again at a later time.",
+                          "title": "Body",
+                          "inputType": "Text",
+                          "validators": [],
+                          "translatable": true
+                        },
+                        "_isCancellable": {
+                          "type": "boolean",
+                          "required": false,
+                          "default": false,
+                          "title": "Is able to be cancelled?",
+                          "inputType": "Checkbox",
+                          "validators": [],
+                          "help": "Determines whether the notification can be cancelled/closed."
+                        },
+                        "_closeCoursePrompt": {
+                          "type": "object",
+                          "required": false,
+                          "title": "Close course prompt",
+                          "properties": {
+                            "_isEnabled": {
+                              "type": "boolean",
+                              "required": false,
+                              "default": true,
+                              "title": "Enable close course prompt?",
+                              "inputType": "Checkbox",
+                              "validators": [],
+                              "help": "Determines whether a button prompt to close the course window (only possible if the course was launched in a popup window) is included."
+                            },
+                            "_label": {
+                              "type": "string",
+                              "required": false,
+                              "default": "Close",
+                              "title": "Button label",
+                              "inputType": "Text",
+                              "validators": [],
+                              "translatable": true
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }        
+        },
+        "contentobject": {
+          "type": "object"
+        },
+        "article": {
+          "type": "object"
+        },
+        "block": {
+          "type": "object"
+        },
+        "component": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}

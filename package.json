@@ -4,7 +4,7 @@
   "framework": ">=5.3",
   "homepage": "https://github.com/adaptlearning/adapt-contrib-trackingErrors",
   "issues": "https://github.com/adaptlearning/adapt-contrib-trackingErrors/issues",
-  "displayName": "trackingErrors",
+  "displayName": "Tracking Errors",
   "extension": "trackingErrors",
   "description": "An extension which manages and displays notifications to provide a consistent UI for tracking errors across plugins.",
   "main": "/js/adapt-trackingErrors.js",

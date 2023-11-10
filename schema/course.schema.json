@@ -44,7 +44,7 @@
                       "type": "string",
                       "title": "Title",
                       "description": "The text used as the popup title.",
-                      "default": "Initialization Error"
+                      "default": "Initialization error"
                     },
                     "body": {
                       "type": "string",
@@ -66,7 +66,7 @@
                         "properties": {
                           "_isEnabled": {
                             "type": "boolean",
-                            "title": "Enable course close button?",
+                            "title": "Enable close course button?",
                             "description": "Determines whether a button prompt to close the course window (only possible if the course was launched in a popup window) is included.",
                             "default": false
                           },
@@ -117,7 +117,7 @@
                               "type": "string",
                               "title": "Title",
                               "description": "The text used as the popup title.",
-                              "default": "Connection Error"
+                              "default": "Connection error"
                             },
                             "body": {
                               "type": "string",
@@ -143,7 +143,7 @@
                             "type": "string",
                             "title": "Title",
                             "description": "The text used as the popup title.",
-                            "default": "Connection Error"
+                            "default": "Connection error"
                           },
                           "body": {
                             "type": "string",
@@ -207,21 +207,21 @@
                             "description": "Determines whether the notification can be cancelled/closed.",
                             "default": false
                           },
-                          "_closePrompt": {
+                          "_closeCoursePrompt": {
                             "type": "object",
-                            "title": "Close prompt",
+                            "title": "Close course prompt",
                             "default": {},
                             "properties": {
                               "_isEnabled": {
                                 "type": "boolean",
-                                "title": "Enable close prompt?",
-                                "description": "Determines whether this notification is enabled.",
+                                "title": "Enable close course prompt?",
+                                "description": "Determines whether a button prompt to close the course window (only possible if the course was launched in a popup window) is included.",
                                 "default": true
                               },
                               "_closeErrorOnSuccess": {
                                 "type": "string",
                                 "title": "Button label",
-                                "description": "Determines whether this notification is enabled.",
+                                "description": "",
                                 "default": "OK"
                               }
                             }
@@ -243,32 +243,32 @@
                         "_limit": {
                           "type": "number",
                           "title": "Number of retries",
-                          "description": "Determines whether this notification is enabled.",
+                          "description": "Sets the number of connection retries before the final connection test appears.",
                           "default": 2
                         },
                         "label": {
                           "type": "string",
                           "title": "Button label",
-                          "description": "Determines whether this notification is enabled.",
+                          "description": "",
                           "default": "Retry"
                         }
                       }
                     },
                     "_closeCoursePrompt": {
                       "type": "object",
-                      "title": "Course close prompt",
+                      "title": "Close course prompt",
                       "default": {},
                       "properties": {
                         "_isEnabled": {
                           "type": "boolean",
-                          "title": "Enable course close prompt?",
+                          "title": "Enable close course prompt?",
                           "description": "Determines whether this notification is enabled.",
                           "default": true
                         },
                         "label": {
                           "type": "string",
                           "title": "Button label",
-                          "description": "Determines whether this notification is enabled.",
+                          "description": "",
                           "default": "Close"
                         }
                       }
@@ -296,7 +296,7 @@
                       "type": "string",
                       "title": "Title",
                       "description": "The text used as the popup title.",
-                      "default": "Data Error"
+                      "default": "Data error"
                     },
                     "body": {
                       "type": "string",
@@ -318,9 +318,9 @@
                         "properties": {
                           "_isEnabled": {
                             "type": "boolean",
-                            "title": "Enable course close button?",
+                            "title": "Enable close course button?",
                             "description": "Determines whether a button prompt to close the course window (only possible if the course was launched in a popup window) is included.",
-                            "default": false
+                            "default": true
                           },
                           "label": {
                             "type": "string",
@@ -354,7 +354,7 @@
                       "type": "string",
                       "title": "Title",
                       "description": "The text used as the popup title.",
-                      "default": "Termination Error"
+                      "default": "Termination error"
                     },
                     "body": {
                       "type": "string",
@@ -376,9 +376,9 @@
                         "properties": {
                           "_isEnabled": {
                             "type": "boolean",
-                            "title": "Enable course close button?",
+                            "title": "Enable close course button?",
                             "description": "Determines whether a button prompt to close the course window (only possible if the course was launched in a popup window) is included.",
-                            "default": false
+                            "default": true
                           },
                           "label": {
                             "type": "string",
