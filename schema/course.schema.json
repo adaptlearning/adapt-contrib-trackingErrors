@@ -207,22 +207,24 @@
                             "description": "Determines whether the notification can be cancelled/closed.",
                             "default": false
                           },
-                          "_closeCoursePrompt": {
-                            "type": "object",
-                            "title": "Close course prompt",
-                            "default": {},
-                            "properties": {
-                              "_isEnabled": {
-                                "type": "boolean",
-                                "title": "Enable close course prompt?",
-                                "description": "Determines whether a button prompt to close the course window (only possible if the course was launched in a popup window) is included.",
-                                "default": true
-                              },
-                              "_closeErrorOnSuccess": {
-                                "type": "string",
-                                "title": "Button label",
-                                "description": "",
-                                "default": "OK"
+                          "properties": {
+                            "_closePrompt": {
+                              "type": "object",
+                              "title": "Close notification prompt",
+                              "default": {},
+                              "properties": {
+                                "_isEnabled": {
+                                  "type": "boolean",
+                                  "title": "Enable close notification button?",
+                                  "description": "Determines whether a button prompt to close the notification is included.",
+                                  "default": false
+                                },
+                                "label": {
+                                  "type": "string",
+                                  "title": "Button label",
+                                  "description": "Text that appears on the button.",
+                                  "default": "Close"
+                                }
                               }
                             }
                           }
@@ -249,7 +251,7 @@
                         "label": {
                           "type": "string",
                           "title": "Button label",
-                          "description": "",
+                          "description": "Text that appears on the button.",
                           "default": "Retry"
                         }
                       }
@@ -268,7 +270,7 @@
                         "label": {
                           "type": "string",
                           "title": "Button label",
-                          "description": "",
+                          "description": "Text that appears on the button.",
                           "default": "Close"
                         }
                       }
