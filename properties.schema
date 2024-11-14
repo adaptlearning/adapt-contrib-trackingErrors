@@ -307,31 +307,31 @@
                                   "inputType": "Checkbox",
                                   "validators": [],
                                   "help": "Determines whether the notification can be cancelled/closed."
-                                }
-                              }
-                            },
-                            "_closeCoursePrompt": {
-                              "type": "object",
-                              "required": false,
-                              "title": "Close course prompt",
-                              "properties": {
-                                "_isEnabled": {
-                                  "type": "boolean",
-                                  "required": false,
-                                  "default": true,
-                                  "title": "Enable close course prompt?",
-                                  "inputType": "Checkbox",
-                                  "validators": [],
-                                  "help": "Determines whether a button prompt to close the course window (only possible if the course was launched in a popup window) is included."
                                 },
-                                "_closeErrorOnSuccess": {
-                                  "type": "string",
+                                "_closePrompt": {
+                                  "type": "object",
                                   "required": false,
-                                  "default": "OK",
-                                  "title": "Button label",
-                                  "inputType": "Text",
-                                  "validators": [],
-                                  "translatable": true
+                                  "title": "Close notification prompt",
+                                  "properties": {
+                                    "_isEnabled": {
+                                      "type": "boolean",
+                                      "required": false,
+                                      "default": true,
+                                      "title": "Enable close notification button?",
+                                      "inputType": "Checkbox",
+                                      "validators": [],
+                                      "help": "Determines whether a button prompt to close the notification is included."
+                                    },
+                                    "label": {
+                                      "type": "string",
+                                      "required": false,
+                                      "default": "OK",
+                                      "title": "Button label",
+                                      "inputType": "Text",
+                                      "validators": [],
+                                      "translatable": true
+                                    }
+                                  }
                                 }
                               }
                             }
