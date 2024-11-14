@@ -104,7 +104,8 @@
                               "title": "Button label",
                               "inputType": "Text",
                               "validators": [],
-                              "translatable": true
+                              "translatable": true,
+                              "help": "Text that appears on the button."
                             }
                           }
                         }
@@ -329,7 +330,8 @@
                                       "title": "Button label",
                                       "inputType": "Text",
                                       "validators": [],
-                                      "translatable": true
+                                      "translatable": true,
+                                      "help": "Text that appears on the button."
                                     }
                                   }
                                 }
@@ -367,7 +369,8 @@
                               "title": "Button label",
                               "inputType": "Text",
                               "validators": [],
-                              "translatable": true
+                              "translatable": true,
+                              "help": "Text that appears on the button."
                             }
                           }
                         },
@@ -392,7 +395,8 @@
                               "title": "Button label",
                               "inputType": "Text",
                               "validators": [],
-                              "translatable": true
+                              "translatable": true,
+                              "help": "Text that appears on the button."
                             }
                           }
                         }
@@ -469,7 +473,8 @@
                               "title": "Button label",
                               "inputType": "Text",
                               "validators": [],
-                              "translatable": true
+                              "translatable": true,
+                              "help": "Text that appears on the button."
                             }
                           }
                         }
@@ -546,7 +551,8 @@
                               "title": "Button label",
                               "inputType": "Text",
                               "validators": [],
-                              "translatable": true
+                              "translatable": true,
+                              "help": "Text that appears on the button."
                             }
                           }
                         }
