@@ -134,95 +134,112 @@
                           }
                         },
                         "_intermediate": {
-                          "_classes": {
-                            "type": "string",
-                            "title": "Custom classes",
-                            "description": "CSS class name to be applied to the popup. The class must be predefined in one of the LESS files. Separate multiple classes with a space."
-                          },
-                          "title": {
-                            "type": "string",
-                            "title": "Title",
-                            "description": "The text used as the popup title.",
-                            "default": "Connection error"
-                          },
-                          "body": {
-                            "type": "string",
-                            "title": "Body",
-                            "description": "The text used to inform/instruct users about the error.",
-                            "default": "It looks like we still weren’t able to establish a connection. Please check your connections and select <strong>Retry</strong>.<br><br>If the problem persists, please close the course and relaunch the activity."
-                          },
-                          "_isCancellable": {
-                            "type": "boolean",
-                            "title": "Is able to be cancelled?",
-                            "description": "Determines whether the notification can be cancelled/closed.",
-                            "default": false
+                          "type": "object",
+                          "title": "Intermediate",
+                          "default": {},
+                          "properties": {
+                            "_classes": {
+                              "type": "string",
+                              "title": "Custom classes",
+                              "description": "CSS class name to be applied to the popup. The class must be predefined in one of the LESS files. Separate multiple classes with a space."
+                            },
+                            "title": {
+                              "type": "string",
+                              "title": "Title",
+                              "description": "The text used as the popup title.",
+                              "default": "Connection error"
+                            },
+                            "body": {
+                              "type": "string",
+                              "title": "Body",
+                              "description": "The text used to inform/instruct users about the error.",
+                              "default": "It looks like we still weren’t able to establish a connection. Please check your connections and select <strong>Retry</strong>.<br><br>If the problem persists, please close the course and relaunch the activity."
+                            },
+                            "_isCancellable": {
+                              "type": "boolean",
+                              "title": "Is able to be cancelled?",
+                              "description": "Determines whether the notification can be cancelled/closed.",
+                              "default": false
+                            }
                           }
                         },
                         "_final": {
-                          "_classes": {
-                            "type": "string",
-                            "title": "Custom classes",
-                            "description": "CSS class name to be applied to the popup. The class must be predefined in one of the LESS files. Separate multiple classes with a space."
-                          },
-                          "title": {
-                            "type": "string",
-                            "title": "Title",
-                            "description": "The text used as the popup title.",
-                            "default": "Connection Failure"
-                          },
-                          "body": {
-                            "type": "string",
-                            "title": "Body",
-                            "description": "The text used to inform/instruct users about the error.",
-                            "default": "Unfortunately, we were unable to re-establish a connection. Your recent progress will not be saved.<br><br>Please close the course and try again at a later time."
-                          },
-                          "_isCancellable": {
-                            "type": "boolean",
-                            "title": "Is able to be cancelled?",
-                            "description": "Determines whether the notification can be cancelled/closed.",
-                            "default": false
+                          "type": "object",
+                          "title": "Final",
+                          "default": {},
+                          "properties": {
+                            "_classes": {
+                              "type": "string",
+                              "title": "Custom classes",
+                              "description": "CSS class name to be applied to the popup. The class must be predefined in one of the LESS files. Separate multiple classes with a space."
+                            },
+                            "title": {
+                              "type": "string",
+                              "title": "Title",
+                              "description": "The text used as the popup title.",
+                              "default": "Connection Failure"
+                            },
+                            "body": {
+                              "type": "string",
+                              "title": "Body",
+                              "description": "The text used to inform/instruct users about the error.",
+                              "default": "Unfortunately, we were unable to re-establish a connection. Your recent progress will not be saved.<br><br>Please close the course and try again at a later time."
+                            },
+                            "_isCancellable": {
+                              "type": "boolean",
+                              "title": "Is able to be cancelled?",
+                              "description": "Determines whether the notification can be cancelled/closed.",
+                              "default": false
+                            }
                           }
                         },
                         "_success": {
-                          "_classes": {
-                            "type": "string",
-                            "title": "Custom classes",
-                            "description": "CSS class name to be applied to the popup. The class must be predefined in one of the LESS files. Separate multiple classes with a space."
-                          },
-                          "title": {
-                            "type": "string",
-                            "title": "Title",
-                            "description": "The text used as the popup title.",
-                            "default": "Connection Success"
-                          },
-                          "body": {
-                            "type": "string",
-                            "title": "Body",
-                            "description": "The text used to inform/instruct users about the error.",
-                            "default": "Your connection was re-established, and your progress has been saved. Select <strong>OK</strong> to continue."
-                          },
-                          "_isCancellable": {
-                            "type": "boolean",
-                            "title": "Is able to be cancelled?",
-                            "description": "Determines whether the notification can be cancelled/closed.",
-                            "default": false
-                          },
-                          "_closeCoursePrompt": {
-                            "type": "object",
-                            "title": "Close course prompt",
-                            "default": {},
+                          "type": "object",
+                          "title": "Success",
+                          "default": {},
+                          "properties": {
+                            "_classes": {
+                              "type": "string",
+                              "title": "Custom classes",
+                              "description": "CSS class name to be applied to the popup. The class must be predefined in one of the LESS files. Separate multiple classes with a space."
+                            },
+                            "title": {
+                              "type": "string",
+                              "title": "Title",
+                              "description": "The text used as the popup title.",
+                              "default": "Connection Success"
+                            },
+                            "body": {
+                              "type": "string",
+                              "title": "Body",
+                              "description": "The text used to inform/instruct users about the error.",
+                              "default": "Your connection was re-established, and your progress has been saved. Select <strong>OK</strong> to continue."
+                            },
+                            "_isCancellable": {
+                              "type": "boolean",
+                              "title": "Is able to be cancelled?",
+                              "description": "Determines whether the notification can be cancelled/closed.",
+                              "default": false
+                            },
                             "properties": {
-                              "_isEnabled": {
-                                "type": "boolean",
-                                "title": "Enable close course prompt?",
-                                "description": "Determines whether a button prompt to close the course window (only possible if the course was launched in a popup window) is included.",
-                                "default": true
-                              },
-                              "_closeErrorOnSuccess": {
-                                "type": "string",
-                                "title": "Button label",
-                                "description": "",
-                                "default": "OK"
+                              "_closePrompt": {
+                                "type": "object",
+                                "title": "Close notification prompt",
+                                "default": {},
+                                "properties": {
+                                  "_isEnabled": {
+                                    "type": "boolean",
+                                    "title": "Enable close notification button?",
+                                    "description": "Determines whether a button prompt to close the notification is included.",
+                                    "default": false
+                                  },
+                                  "label": {
+                                    "type": "string",
+                                    "title": "Button label",
+                                    "description": "Text that appears on the button.",
+                                    "default": "Close"
+                                  }
+                                }
                               }
                             }
                           }
@@ -249,7 +266,7 @@
                         "label": {
                           "type": "string",
                           "title": "Button label",
-                          "description": "",
+                          "description": "Text that appears on the button.",
                           "default": "Retry"
                         }
                       }
@@ -268,7 +285,7 @@
                         "label": {
                           "type": "string",
                           "title": "Button label",
-                          "description": "",
+                          "description": "Text that appears on the button.",
                           "default": "Close"
                         }
                       }
